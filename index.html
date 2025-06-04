@@ -2,222 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>K Customs - Car Store</title>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K Customs - Luxury Cars</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
     }
-
     header {
-      background-color: #1e1e1e;
-      padding: 1rem;
+      background: linear-gradient(90deg, #000000, #434343);
+      padding: 1.5rem;
       text-align: center;
     }
-
     header h1 {
-      font-family: 'Permanent Marker', cursive;
       font-size: 3rem;
+      font-family: 'Courier New', monospace;
       color: #ff4c4c;
-      text-shadow: 2px 2px #000;
-      margin: 0;
+      text-shadow: 2px 2px 4px #000;
     }
-
     .banner {
-      width: 100%;
-      height: 300px;
-      background: url('https://images.unsplash.com/photo-1607532941433-27b9aafc0f79?auto=compress&cs=tinysrgb&w=1200')
-        center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+      height: 50vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      color: #fff;
+      color: white;
       font-size: 2rem;
       font-weight: bold;
-      text-shadow: 2px 2px 10px #000;
+      text-shadow: 1px 1px 6px #000;
     }
-
-    #products {
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
       padding: 2rem;
     }
-
-    #products h2 {
-      text-align: center;
-      color: #ff4c4c;
-    }
-
-    .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
     .product {
-      background-color: #222;
-      border-radius: 10px;
+      background-color: #1a1a1a;
       padding: 1rem;
-      width: 280px;
+      border-radius: 10px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
-
     .product img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
       border-radius: 8px;
     }
-
-    .product h3 {
-      margin: 0.5rem 0;
-    }
-
-    .product p {
-      font-size: 1.2rem;
-      margin: 0.3rem 0 1rem 0;
-    }
-
-    .product button {
-      background-color: #ff4c4c;
-      color: #fff;
-      border: none;
+    button {
+      margin-top: 10px;
       padding: 0.5rem 1rem;
+      background-color: #ff4c4c;
+      border: none;
+      color: white;
       border-radius: 5px;
       cursor: pointer;
-      font-weight: bold;
-      font-size: 1rem;
     }
-
-    .product button:hover {
-      background-color: #e63636;
-    }
-
     #cart {
-      background-color: #1e1e1e;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 2rem;
+      background-color: #111;
     }
-
-    #cart h2 {
-      color: #ff4c4c;
+    #contact {
+      padding: 2rem;
+      background-color: #222;
+      color: white;
       text-align: center;
     }
-
-    #cart-items {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: #222;
-      padding: 1rem;
-      border-radius: 10px;
-      min-height: 50px;
-    }
-
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-
-    @media (max-width: 700px) {
-      .product-list {
-        flex-direction: column;
-        align-items: center;
-      }
-      .product {
-        width: 90%;
-      }
-    }
+    a { color: #25D366; text-decoration: none; }
   </style>
 </head>
-
 <body>
   <header>
     <h1>K Customs</h1>
   </header>
 
   <div class="banner">
-    🚘 Premium Cars Only @ K Customs 🚘
+    Premium Cars • Nairobi • Custom Rides
   </div>
 
-  <section id="products">
-    <h2>Luxury Car Collection</h2>
-    <div class="product-list">
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1607532941433-27b9aafc0f79?auto=compress&cs=tinysrgb&w=600" alt="G-Wagon Brabus" />
-        <h3>G-Wagon Brabus</h3>
-        <p>$210,000</p>
-        <button data-name="G-Wagon Brabus" data-price="210000">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1619625362346-9baf4b44b5c3?auto=compress&cs=tinysrgb&w=600" alt="Golf GTI" />
-        <h3>Volkswagen Golf GTI</h3>
-        <p>$38,000</p>
-        <button data-name="Volkswagen Golf GTI" data-price="38000">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1613662302646-3f0db37d0bb2?auto=compress&cs=tinysrgb&w=600" alt="Audi RS8" />
-        <h3>Audi RS8</h3>
-        <p>$140,000</p>
-        <button data-name="Audi RS8" data-price="140000">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1604671801908-969d6a36f1ae?auto=compress&cs=tinysrgb&w=600" alt="Mercedes AMG" />
-        <h3>Mercedes AMG</h3>
-        <p>$135,000</p>
-        <button data-name="Mercedes AMG" data-price="135000">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1608378181540-42a0d9c8e6cd?auto=compress&cs=tinysrgb&w=600" alt="Lamborghini Huracán" />
-        <h3>Lamborghini Huracán</h3>
-        <p>$220,000</p>
-        <button data-name="Lamborghini Huracán" data-price="220000">Add to Cart</button>
-      </div>
+  <section class="product-list">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=compress&cs=tinysrgb&w=600" alt="G-Wagon Brabus" />
+      <h3>G-Wagon Brabus</h3>
+      <p>$210,000</p>
+      <button data-name="G-Wagon Brabus" data-price="210000">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1607083206962-96e6d11c7d2b?auto=compress&cs=tinysrgb&w=600" alt="Golf GTI" />
+      <h3>Volkswagen Golf GTI</h3>
+      <p>$38,000</p>
+      <button data-name="Golf GTI" data-price="38000">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1622555082231-ec44c3bb5c41?auto=compress&cs=tinysrgb&w=600" alt="Audi RS8" />
+      <h3>Audi RS8</h3>
+      <p>$140,000</p>
+      <button data-name="Audi RS8" data-price="140000">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1618886614638-6b2b21b48f6a?auto=compress&cs=tinysrgb&w=600" alt="Mercedes AMG" />
+      <h3>Mercedes AMG</h3>
+      <p>$135,000</p>
+      <button data-name="Mercedes AMG" data-price="135000">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1617780400384-ec5d2d1541f1?auto=compress&cs=tinysrgb&w=600" alt="Lamborghini Huracan" />
+      <h3>Lamborghini Huracán</h3>
+      <p>$220,000</p>
+      <button data-name="Lamborghini Huracan" data-price="220000">Add to Cart</button>
     </div>
   </section>
 
   <section id="cart">
     <h2>Your Cart</h2>
-    <div id="cart-items">Your cart is empty.</div>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0</span></p>
+  </section>
+
+  <section id="contact">
+    <h2 style="color: #ff4c4c;">Contact K Customs</h2>
+    <p>🚗 Want to book a test drive or customize your ride?</p>
+    <p>📞 <strong>Call/WhatsApp:</strong> <a href="https://wa.me/254703342882">+254 703 342 882</a></p>
+    <p>📧 <strong>Email:</strong> <a href="mailto:kcustoms@gmail.com" style="color: #4DA6FF;">kcustoms@gmail.com</a></p>
+    <p>📍 <strong>Location:</strong> Parklands Road, Nairobi, Kenya</p>
+    <div style="margin-top: 1rem;">
+      <a href="https://wa.me/254703342882" target="_blank">
+        📲 Message us on WhatsApp
+      </a>
+    </div>
   </section>
 
   <script>
-    const cartItemsDiv = document.getElementById("cart-items");
-    let cart = [];
+    const cart = [];
+    const cartList = document.getElementById("cart-items");
+    const totalPrice = document.getElementById("total");
 
-    document.querySelectorAll(".product button").forEach(button => {
-      button.addEventListener("click", () => {
-        const name = button.getAttribute("data-name");
-        const price = parseFloat(button.getAttribute("data-price"));
-
+    document.querySelectorAll(".product button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const name = btn.getAttribute("data-name");
+        const price = parseFloat(btn.getAttribute("data-price"));
         cart.push({ name, price });
-        renderCart();
+        updateCart();
       });
     });
 
-    function renderCart() {
-      cartItemsDiv.innerHTML = "";
-      if (cart.length === 0) {
-        cartItemsDiv.innerHTML = "<p>Your cart is empty.</p>";
-        return;
-      }
-      cart.forEach(item => {
-        const itemDiv = document.createElement("div");
-        itemDiv.className = "cart-item";
-        itemDiv.innerHTML = `<span>${item.name}</span><span>$${item.price.toLocaleString()}</span>`;
-        cartItemsDiv.appendChild(itemDiv);
+    function updateCart() {
+      cartList.innerHTML = "";
+      let total = 0;
+      cart.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - $${item.price.toLocaleString()}`;
+        cartList.appendChild(li);
+        total += item.price;
       });
+      totalPrice.textContent = total.toLocaleString();
     }
   </script>
 </body>
