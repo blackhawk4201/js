@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K Customs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>K Customs - Car Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -32,7 +32,8 @@
     .banner {
       width: 100%;
       height: 300px;
-      background: url('https://images.unsplash.com/photo-1618379108972-1d28d9efc530?auto=compress&cs=tinysrgb&w=1200') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=compress&cs=tinysrgb&w=1200')
+        center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -63,20 +64,25 @@
       background-color: #222;
       border-radius: 10px;
       padding: 1rem;
-      width: 250px;
+      width: 280px;
       text-align: center;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     .product img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
       border-radius: 8px;
     }
 
     .product h3 {
       margin: 0.5rem 0;
+    }
+
+    .product p {
+      font-size: 1.2rem;
+      margin: 0.3rem 0 1rem 0;
     }
 
     .product button {
@@ -86,6 +92,8 @@
       padding: 0.5rem 1rem;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
     }
 
     .product button:hover {
@@ -109,12 +117,25 @@
       background-color: #222;
       padding: 1rem;
       border-radius: 10px;
+      min-height: 50px;
     }
 
     .cart-item {
       display: flex;
       justify-content: space-between;
       margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .product-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .product {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -125,61 +146,45 @@
   </header>
 
   <div class="banner">
-    🔥 Fresh Streetwear Just Dropped 🔥
+    🔥 Exclusive Cars & Hot Deals 🔥
   </div>
 
   <section id="products">
-    <h2>Featured Products</h2>
+    <h2>Featured Cars</h2>
     <div class="product-list">
-
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1618354691448-8fd0746c9aab?auto=compress&cs=tinysrgb&w=600" alt="Nike Hoodie">
-        <h3>Nike Hoodie</h3>
-        <p>$49.99</p>
-        <button data-name="Nike Hoodie" data-price="49.99">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=compress&cs=tinysrgb&w=600" alt="Red Sports Car" />
+        <h3>Red Sports Car</h3>
+        <p>$75,000</p>
+        <button data-name="Red Sports Car" data-price="75000">Add to Cart</button>
       </div>
 
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=compress&cs=tinysrgb&w=600" alt="White Sneakers">
-        <h3>White Sneakers</h3>
-        <p>$59.99</p>
-        <button data-name="White Sneakers" data-price="59.99">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1519648023493-d82b5f8d7b9a?auto=compress&cs=tinysrgb&w=600" alt="Classic Muscle Car" />
+        <h3>Classic Muscle Car</h3>
+        <p>$45,000</p>
+        <button data-name="Classic Muscle Car" data-price="45000">Add to Cart</button>
       </div>
 
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=compress&cs=tinysrgb&w=600" alt="Graphic T-shirt">
-        <h3>Graphic T-shirt</h3>
-        <p>$19.99</p>
-        <button data-name="Graphic T-shirt" data-price="19.99">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=compress&cs=tinysrgb&w=600" alt="Luxury Sedan" />
+        <h3>Luxury Sedan</h3>
+        <p>$85,000</p>
+        <button data-name="Luxury Sedan" data-price="85000">Add to Cart</button>
       </div>
 
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1611080626919-d1e9cfe1c63b?auto=compress&cs=tinysrgb&w=600" alt="Air Jordans">
-        <h3>Air Jordans</h3>
-        <p>$129.99</p>
-        <button data-name="Air Jordans" data-price="129.99">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=compress&cs=tinysrgb&w=600" alt="Modern SUV" />
+        <h3>Modern SUV</h3>
+        <p>$55,000</p>
+        <button data-name="Modern SUV" data-price="55000">Add to Cart</button>
       </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1618354454077-5c0d876d0b8a?auto=compress&cs=tinysrgb&w=600" alt="Black Cargo Pants">
-        <h3>Black Cargo Pants</h3>
-        <p>$39.99</p>
-        <button data-name="Black Cargo Pants" data-price="39.99">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1530845641044-6f5f7f30d6a6?auto=compress&cs=tinysrgb&w=600" alt="Denim Jacket">
-        <h3>Denim Jacket</h3>
-        <p>$69.99</p>
-        <button data-name="Denim Jacket" data-price="69.99">Add to Cart</button>
-      </div>
-
     </div>
   </section>
 
   <section id="cart">
     <h2>Your Cart</h2>
-    <div id="cart-items"></div>
+    <div id="cart-items">Your cart is empty.</div>
   </section>
 
   <script>
@@ -205,7 +210,7 @@
       cart.forEach(item => {
         const itemDiv = document.createElement("div");
         itemDiv.className = "cart-item";
-        itemDiv.innerHTML = `<span>${item.name}</span><span>$${item.price.toFixed(2)}</span>`;
+        itemDiv.innerHTML = `<span>${item.name}</span><span>$${item.price.toLocaleString()}</span>`;
         cartItemsDiv.appendChild(itemDiv);
       });
     }
