@@ -3,126 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>K Customs | Car Store</title>
+  <title>HealthFirst Pharmacy</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #0a0a0a;
-      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
       margin: 0;
       padding: 0;
     }
-
     header {
-      background: url("https://cdn.pixabay.com/photo/2021/08/22/18/25/lamborghini-6565774_1280.jpg") center/cover no-repeat;
-      height: 300px;
+      background: url('https://cdn.pixabay.com/photo/2017/01/16/19/40/pharmacy-1981531_1280.jpg') center/cover no-repeat;
+      height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-shadow: 2px 2px 5px #000;
+      text-shadow: 1px 1px 4px #000;
     }
-
     header h1 {
       font-size: 3rem;
       color: #fff;
-      font-family: 'Impact', sans-serif;
-      background: linear-gradient(to right, red, blue, yellow);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
     }
-
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
       padding: 40px;
     }
-
     .product {
-      background: #1a1a1a;
+      background: #fff;
       padding: 20px;
       border-radius: 12px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
     .product img {
       width: 100%;
-      border-radius: 8px;
-      height: 180px;
+      height: 160px;
       object-fit: cover;
+      border-radius: 8px;
     }
-
     .product h3 {
       margin: 10px 0 5px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
-
     .product p {
       font-size: 0.9rem;
       margin-bottom: 10px;
     }
-
     .product button {
       padding: 8px 15px;
-      background: red;
+      background: #28a745;
       border: none;
       color: white;
       cursor: pointer;
       border-radius: 6px;
     }
-
-    .cart {
-      background: #111;
+    .cart, .contact {
+      background: #e3f2fd;
       padding: 20px;
       margin: 20px;
       border-radius: 10px;
     }
-
-    .contact {
-      padding: 30px;
-      background: #111;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>K Customs</h1>
+    <h1>HealthFirst Pharmacy</h1>
   </header>
 
   <div class="products">
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2022/05/31/16/53/brabus-7233562_1280.jpg" alt="G-Wagon Brabus">
-      <h3>G-Wagon Brabus</h3>
-      <p>High-performance luxury SUV</p>
-      <button onclick="addToCart('G-Wagon Brabus')">Add to Cart</button>
+      <img src="https://cdn.pixabay.com/photo/2016/12/06/09/31/medications-1885560_1280.jpg" alt="Pain Relief Tablets">
+      <h3>Pain Relief Tablets</h3>
+      <p>Effective relief for mild to severe pain.</p>
+      <button onclick="addToCart('Pain Relief Tablets')">Add to Cart</button>
     </div>
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/auto-1868726_1280.jpg" alt="Golf GTI">
-      <h3>Volkswagen Golf GTI</h3>
-      <p>Sporty hatchback with style</p>
-      <button onclick="addToCart('Volkswagen Golf GTI')">Add to Cart</button>
+      <img src="https://cdn.pixabay.com/photo/2014/12/10/21/00/pills-563017_1280.jpg" alt="Vitamin Capsules">
+      <h3>Vitamin Capsules</h3>
+      <p>Essential daily vitamins to boost immunity.</p>
+      <button onclick="addToCart('Vitamin Capsules')">Add to Cart</button>
     </div>
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2022/03/08/08/47/audi-7055797_1280.jpg" alt="Audi RS8">
-      <h3>Audi RS8</h3>
-      <p>Luxury meets speed</p>
-      <button onclick="addToCart('Audi RS8')">Add to Cart</button>
+      <img src="https://cdn.pixabay.com/photo/2017/01/16/19/40/pharmacy-1981531_1280.jpg" alt="Cough Syrup">
+      <h3>Cough Syrup</h3>
+      <p>Fast relief for dry and wet coughs.</p>
+      <button onclick="addToCart('Cough Syrup')">Add to Cart</button>
     </div>
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2021/01/31/16/42/mercedes-amg-5966640_1280.jpg" alt="Mercedes AMG">
-      <h3>Mercedes AMG</h3>
-      <p>Powerful and elegant</p>
-      <button onclick="addToCart('Mercedes AMG')">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2021/08/22/18/25/lamborghini-6565774_1280.jpg" alt="Lamborghini Huracán">
-      <h3>Lamborghini Huracán</h3>
-      <p>Exotic speed machine</p>
-      <button onclick="addToCart('Lamborghini Huracán')">Add to Cart</button>
+      <img src="https://cdn.pixabay.com/photo/2017/09/12/14/23/drugs-2741791_1280.jpg" alt="Antibiotics">
+      <h3>Antibiotics</h3>
+      <p>Prescription strength infection fighters.</p>
+      <button onclick="addToCart('Antibiotics')">Add to Cart</button>
     </div>
   </div>
 
@@ -132,7 +108,7 @@
   </div>
 
   <div class="contact">
-    <h2>📞 Dealer Contact</h2>
+    <h2>📞 Contact Information</h2>
     <p>Phone: 0703342882</p>
     <p>Location: Nairobi, Kenya — Parklands Road</p>
   </div>
@@ -145,6 +121,6 @@
       list.appendChild(li);
     }
   </script>
-
 </body>
 </html>
+
