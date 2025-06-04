@@ -29,6 +29,20 @@
       margin: 0;
     }
 
+    .banner {
+      width: 100%;
+      height: 300px;
+      background: url('https://images.unsplash.com/photo-1618379108972-1d28d9efc530?auto=compress&cs=tinysrgb&w=1200') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px #000;
+    }
+
     #products {
       padding: 2rem;
     }
@@ -77,6 +91,31 @@
     .product button:hover {
       background-color: #e63636;
     }
+
+    #cart {
+      background-color: #1e1e1e;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    #cart h2 {
+      color: #ff4c4c;
+      text-align: center;
+    }
+
+    #cart-items {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #222;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 
@@ -85,47 +124,51 @@
     <h1>K Customs</h1>
   </header>
 
+  <div class="banner">
+    🔥 Fresh Streetwear Just Dropped 🔥
+  </div>
+
   <section id="products">
     <h2>Featured Products</h2>
     <div class="product-list">
 
       <div class="product">
-        <img src="https://images.pexels.com/photos/8454347/pexels-photo-8454347.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nike Hoodie">
+        <img src="https://images.unsplash.com/photo-1618354691448-8fd0746c9aab?auto=compress&cs=tinysrgb&w=600" alt="Nike Hoodie">
         <h3>Nike Hoodie</h3>
         <p>$49.99</p>
         <button data-name="Nike Hoodie" data-price="49.99">Add to Cart</button>
       </div>
 
       <div class="product">
-        <img src="https://images.pexels.com/photos/2983461/pexels-photo-2983461.jpeg?auto=compress&cs=tinysrgb&w=600" alt="White Sneakers">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=compress&cs=tinysrgb&w=600" alt="White Sneakers">
         <h3>White Sneakers</h3>
         <p>$59.99</p>
         <button data-name="White Sneakers" data-price="59.99">Add to Cart</button>
       </div>
 
       <div class="product">
-        <img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Graphic T-shirt">
+        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=compress&cs=tinysrgb&w=600" alt="Graphic T-shirt">
         <h3>Graphic T-shirt</h3>
         <p>$19.99</p>
         <button data-name="Graphic T-shirt" data-price="19.99">Add to Cart</button>
       </div>
 
       <div class="product">
-        <img src="https://images.pexels.com/photos/7599770/pexels-photo-7599770.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Air Jordans">
+        <img src="https://images.unsplash.com/photo-1611080626919-d1e9cfe1c63b?auto=compress&cs=tinysrgb&w=600" alt="Air Jordans">
         <h3>Air Jordans</h3>
         <p>$129.99</p>
         <button data-name="Air Jordans" data-price="129.99">Add to Cart</button>
       </div>
 
       <div class="product">
-        <img src="https://images.pexels.com/photos/9778467/pexels-photo-9778467.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Black Cargo Pants">
+        <img src="https://images.unsplash.com/photo-1618354454077-5c0d876d0b8a?auto=compress&cs=tinysrgb&w=600" alt="Black Cargo Pants">
         <h3>Black Cargo Pants</h3>
         <p>$39.99</p>
         <button data-name="Black Cargo Pants" data-price="39.99">Add to Cart</button>
       </div>
 
       <div class="product">
-        <img src="https://images.pexels.com/photos/1807217/pexels-photo-1807217.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Denim Jacket">
+        <img src="https://images.unsplash.com/photo-1530845641044-6f5f7f30d6a6?auto=compress&cs=tinysrgb&w=600" alt="Denim Jacket">
         <h3>Denim Jacket</h3>
         <p>$69.99</p>
         <button data-name="Denim Jacket" data-price="69.99">Add to Cart</button>
@@ -133,6 +176,40 @@
 
     </div>
   </section>
+
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+  </section>
+
+  <script>
+    const cartItemsDiv = document.getElementById("cart-items");
+    let cart = [];
+
+    document.querySelectorAll(".product button").forEach(button => {
+      button.addEventListener("click", () => {
+        const name = button.getAttribute("data-name");
+        const price = parseFloat(button.getAttribute("data-price"));
+
+        cart.push({ name, price });
+        renderCart();
+      });
+    });
+
+    function renderCart() {
+      cartItemsDiv.innerHTML = "";
+      if (cart.length === 0) {
+        cartItemsDiv.innerHTML = "<p>Your cart is empty.</p>";
+        return;
+      }
+      cart.forEach(item => {
+        const itemDiv = document.createElement("div");
+        itemDiv.className = "cart-item";
+        itemDiv.innerHTML = `<span>${item.name}</span><span>$${item.price.toFixed(2)}</span>`;
+        cartItemsDiv.appendChild(itemDiv);
+      });
+    }
+  </script>
 </body>
 
 </html>
