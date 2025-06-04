@@ -1,72 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Online Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Customs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1e1e1e;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 3rem;
+      color: #ff4c4c;
+      text-shadow: 2px 2px #000;
+      margin: 0;
+    }
+
+    #products {
+      padding: 2rem;
+    }
+
+    #products h2 {
+      text-align: center;
+      color: #ff4c4c;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .product {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin: 0.5rem 0;
+    }
+
+    .product button {
+      background-color: #ff4c4c;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      background-color: #e63636;
+    }
+  </style>
 </head>
+
 <body>
   <header>
-    <h1>My Online Store</h1>
-    <nav>
-      <ul>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>K Customs</h1>
   </header>
-
-  <!-- ✅ Slideshow with ID -->
-  <section class="slideshow">
-    <img id="slideshow-image" src="https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Slideshow">
-  </section>
 
   <section id="products">
     <h2>Featured Products</h2>
     <div class="product-list">
+
       <div class="product">
-        <img src="https://images.pexels.com/photos/10026491/pexels-photo-10026491.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nike Hoodie">
+        <img src="https://images.pexels.com/photos/8454347/pexels-photo-8454347.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nike Hoodie">
         <h3>Nike Hoodie</h3>
         <p>$49.99</p>
         <button data-name="Nike Hoodie" data-price="49.99">Add to Cart</button>
       </div>
+
       <div class="product">
-        <img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=600" alt="White Sneakers">
+        <img src="https://images.pexels.com/photos/2983461/pexels-photo-2983461.jpeg?auto=compress&cs=tinysrgb&w=600" alt="White Sneakers">
         <h3>White Sneakers</h3>
         <p>$59.99</p>
         <button data-name="White Sneakers" data-price="59.99">Add to Cart</button>
       </div>
+
       <div class="product">
-        <img src="https://images.pexels.com/photos/2983461/pexels-photo-2983461.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Graphic T-shirt">
+        <img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Graphic T-shirt">
         <h3>Graphic T-shirt</h3>
         <p>$19.99</p>
         <button data-name="Graphic T-shirt" data-price="19.99">Add to Cart</button>
       </div>
+
+      <div class="product">
+        <img src="https://images.pexels.com/photos/7599770/pexels-photo-7599770.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Air Jordans">
+        <h3>Air Jordans</h3>
+        <p>$129.99</p>
+        <button data-name="Air Jordans" data-price="129.99">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.pexels.com/photos/9778467/pexels-photo-9778467.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Black Cargo Pants">
+        <h3>Black Cargo Pants</h3>
+        <p>$39.99</p>
+        <button data-name="Black Cargo Pants" data-price="39.99">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.pexels.com/photos/1807217/pexels-photo-1807217.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Denim Jacket">
+        <h3>Denim Jacket</h3>
+        <p>$69.99</p>
+        <button data-name="Denim Jacket" data-price="69.99">Add to Cart</button>
+      </div>
+
     </div>
   </section>
-
-  <section id="cart">
-    <h2>Shopping Cart</h2>
-    <div id="cart-items"></div>
-    <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
-    <button onclick="clearCart()">Clear Cart</button>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 My Online Store. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
+
 </html>
