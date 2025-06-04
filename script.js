@@ -1,17 +1,17 @@
-// Slideshow
+// ✅ Real Slideshow
 const images = [
-  "https://via.placeholder.com/800x300?text=Welcome+to+My+Store",
-  "https://via.placeholder.com/800x300?text=New+Arrivals",
-  "https://via.placeholder.com/800x300?text=Best+Deals"
+  "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=800"
 ];
 let i = 0;
 
 setInterval(() => {
   i = (i + 1) % images.length;
-  document.getElementById("slide").src = images[i];
+  document.getElementById("slideshow-image").src = images[i];
 }, 3000);
 
-// Shopping cart
+// ✅ Cart System
 const cart = [];
 const cartItemsContainer = document.getElementById("cart-items");
 const cartTotalElement = document.getElementById("cart-total");
