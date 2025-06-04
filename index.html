@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Online Store</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>My Online Store</h1>
+  <header>
+    <h1>My Online Store</h1>
+    <nav>
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section class="product">
-    <h2>Product 1</h2>
-    <p>$19.99</p>
-    <button>Add to Cart</button>
+  <section class="slideshow">
+    <img src="https://via.placeholder.com/800x300?text=Welcome+to+My+Store" alt="Slide" id="slide">
   </section>
+
+  <section id="products">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x200?text=Product+1" alt="Product 1">
+        <h3>Stylish Hoodie</h3>
+        <p>$29.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x200?text=Product+2" alt="Product 2">
+        <h3>Trendy Sneakers</h3>
+        <p>$59.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x200?text=Product+3" alt="Product 3">
+        <h3>Graphic T-Shirt</h3>
+        <p>$19.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 My Online Store. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
