@@ -1,112 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HealthFirst Pharmacy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Customs Pharmacy</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f9f9;
+      color: #333;
     }
+
     header {
-      background: url('https://cdn.pixabay.com/photo/2017/01/16/19/40/pharmacy-1981531_1280.jpg') center/cover no-repeat;
-      height: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-shadow: 1px 1px 4px #000;
+      background-color: #009688;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 2px;
     }
-    header h1 {
-      font-size: 3rem;
-      color: #fff;
-      background-color: rgba(0,0,0,0.5);
-      padding: 10px 20px;
-      border-radius: 10px;
+
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+      margin-top: 20px;
     }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      border-radius: 12px;
+      max-height: 350px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      padding: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
     }
+
     .product {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     .product img {
       width: 100%;
-      height: 160px;
+      height: 180px;
       object-fit: cover;
-      border-radius: 8px;
-    }
-    .product h3 {
-      margin: 10px 0 5px;
-      font-size: 1.1rem;
-    }
-    .product p {
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-    }
-    .product button {
-      padding: 8px 15px;
-      background: #28a745;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-    .cart, .contact {
-      background: #e3f2fd;
-      padding: 20px;
-      margin: 20px;
       border-radius: 10px;
+    }
+
+    .cart {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .contact {
+      background-color: #e0f2f1;
+      padding: 1.5rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>HealthFirst Pharmacy</h1>
-  </header>
 
-  <div class="products">
+  <header>K CUSTOMS PHARMACY</header>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="https://cdn.pixabay.com/photo/2020/01/25/08/50/pills-4792290_1280.jpg" alt="Pills">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://cdn.pixabay.com/photo/2017/10/10/21/46/medications-2832021_1280.jpg" alt="Medical Capsules">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://cdn.pixabay.com/photo/2017/08/10/07/32/pill-2610270_1280.jpg" alt="Tablet Blisters">
+    </div>
+  </div>
+
+  <!-- Products -->
+  <section class="products">
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/12/06/09/31/medications-1885560_1280.jpg" alt="Pain Relief Tablets">
+      <img src="https://cdn.pixabay.com/photo/2016/12/06/09/31/medications-1885560_1280.jpg" alt="Pain Relief">
       <h3>Pain Relief Tablets</h3>
-      <p>Effective relief for mild to severe pain.</p>
-      <button onclick="addToCart('Pain Relief Tablets')">Add to Cart</button>
+      <p>KSh 250</p>
     </div>
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2014/12/10/21/00/pills-563017_1280.jpg" alt="Vitamin Capsules">
-      <h3>Vitamin Capsules</h3>
-      <p>Essential daily vitamins to boost immunity.</p>
-      <button onclick="addToCart('Vitamin Capsules')">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/01/16/19/40/pharmacy-1981531_1280.jpg" alt="Cough Syrup">
+      <img src="https://cdn.pixabay.com/photo/2017/08/06/06/54/medicine-2582841_1280.jpg" alt="Cough Syrup">
       <h3>Cough Syrup</h3>
-      <p>Fast relief for dry and wet coughs.</p>
-      <button onclick="addToCart('Cough Syrup')">Add to Cart</button>
+      <p>KSh 500</p>
     </div>
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/09/12/14/23/drugs-2741791_1280.jpg" alt="Antibiotics">
-      <h3>Antibiotics</h3>
-      <p>Prescription strength infection fighters.</p>
-      <button onclick="addToCart('Antibiotics')">Add to Cart</button>
+      <img src="https://cdn.pixabay.com/photo/2014/12/17/17/33/vitamins-571918_1280.jpg" alt="Multivitamins">
+      <h3>Multivitamins</h3>
+      <p>KSh 750</p>
     </div>
-  </div>
+  </section>
 
-  <div class="cart">
-    <h2>🛒 Cart</h2>
-    <ul id="cart-items"></ul>
-  </div>
-
+  <!-- Contact Info -->
   <div class="contact">
     <h2>📞 Contact Information</h2>
     <p>Phone: 0703342882</p>
@@ -114,13 +129,20 @@
   </div>
 
   <script>
-    function addToCart(item) {
-      const list = document.getElementById("cart-items");
-      const li = document.createElement("li");
-      li.textContent = item + " added to cart.";
-      list.appendChild(li);
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000);
     }
   </script>
+
 </body>
 </html>
-
