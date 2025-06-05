@@ -45,9 +45,13 @@ function updateCartDisplay() {
     const itemDiv = document.createElement("div");
     itemDiv.innerHTML = `
       ${item.name} - $${item.price} x ${item.quantity}
-      <button onclick="removeItem('${item.name}')">Remove</button>
+      <button class="remove-btn" data-name="${item.name}">Remove</button>
     `;
     cartItemsContainer.appendChild(itemDiv);
+
+    // Attach event listener to the remove button
+    const removeBtn = itemDiv.querySelector('.remove-btn');
+    removeBtn.addEventListener('click', () => removeItem(item.name));
   });
 
   cartTotalElement.textContent = total.toFixed(2);
