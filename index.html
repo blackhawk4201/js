@@ -2,124 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HealthFirst Pharmacy</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: url('https://cdn.pixabay.com/photo/2017/01/16/19/40/pharmacy-1981531_1280.jpg') center/cover no-repeat;
-      height: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-shadow: 1px 1px 4px #000;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #fff;
-      background-color: rgba(0,0,0,0.5);
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      padding: 40px;
-    }
-    .product {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .product img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .product h3 {
-      margin: 10px 0 5px;
-      font-size: 1.1rem;
-    }
-    .product p {
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-    }
-    .product button {
-      padding: 8px 15px;
-      background: #28a745;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-    .cart, .contact {
-      background: #e3f2fd;
-      padding: 20px;
-      margin: 20px;
-      border-radius: 10px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grow your business with cutting-edge digital marketing services. SEO, PPC, content, and more!" />
+  <meta name="keywords" content="Digital Marketing, SEO, PPC, Content Marketing, Social Media" />
+  <meta name="author" content="Your Company Name" />
+
+  <meta property="og:title" content="Top Digital Marketing Agency" />
+  <meta property="og:description" content="Boost your brand with data-driven digital marketing solutions." />
+  <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+
+  <title>DigitalBoost – Elevate Your Brand Online</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Scripts -->
+  <script defer src="script.js"></script>
 </head>
+
 <body>
   <header>
-    <h1>HealthFirst Pharmacy</h1>
+    <div class="container nav">
+      <h1 class="logo">DigitalBoost</h1>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn-primary">Get Started</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="products">
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/12/06/09/31/medications-1885560_1280.jpg" alt="Pain Relief Tablets">
-      <h3>Pain Relief Tablets</h3>
-      <p>Effective relief for mild to severe pain.</p>
-      <button onclick="addToCart('Pain Relief Tablets')">Add to Cart</button>
+  <section class="hero">
+    <div class="container">
+      <h2>Digital Marketing That Delivers</h2>
+      <p>SEO, PPC, Social Media, Content – All in one powerful strategy.</p>
+      <a href="#services" class="btn-secondary">Explore Services</a>
     </div>
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2014/12/10/21/00/pills-563017_1280.jpg" alt="Vitamin Capsules">
-      <h3>Vitamin Capsules</h3>
-      <p>Essential daily vitamins to boost immunity.</p>
-      <button onclick="addToCart('Vitamin Capsules')">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/01/16/19/40/pharmacy-1981531_1280.jpg" alt="Cough Syrup">
-      <h3>Cough Syrup</h3>
-      <p>Fast relief for dry and wet coughs.</p>
-      <button onclick="addToCart('Cough Syrup')">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/09/12/14/23/drugs-2741791_1280.jpg" alt="Antibiotics">
-      <h3>Antibiotics</h3>
-      <p>Prescription strength infection fighters.</p>
-      <button onclick="addToCart('Antibiotics')">Add to Cart</button>
-    </div>
-  </div>
+  </section>
 
-  <div class="cart">
-    <h2>🛒 Cart</h2>
-    <ul id="cart-items"></ul>
-  </div>
+  <section id="services" class="services container">
+    <h3>Our Services</h3>
+    <div class="cards">
+      <div class="card"><i class="fa-solid fa-chart-line"></i><h4>SEO</h4><p>Rank higher and grow traffic organically.</p></div>
+      <div class="card"><i class="fa-solid fa-bullhorn"></i><h4>PPC Ads</h4><p>Target your ideal customers instantly.</p></div>
+      <div class="card"><i class="fa-solid fa-pen-nib"></i><h4>Content</h4><p>Create content that converts and engages.</p></div>
+      <div class="card"><i class="fa-solid fa-hashtag"></i><h4>Social Media</h4><p>Build your brand and grow your community.</p></div>
+    </div>
+  </section>
 
-  <div class="contact">
-    <h2>📞 Contact Information</h2>
-    <p>Phone: 0703342882</p>
-    <p>Location: Nairobi, Kenya — Parklands Road</p>
-  </div>
+  <section id="about" class="about container">
+    <h3>Why Choose Us?</h3>
+    <p>We are a team of certified digital experts delivering ROI-driven marketing solutions tailored to your business goals. Transparency, performance, and creativity – that's our promise.</p>
+  </section>
 
-  <script>
-    function addToCart(item) {
-      const list = document.getElementById("cart-items");
-      const li = document.createElement("li");
-      li.textContent = item + " added to cart.";
-      list.appendChild(li);
-    }
-  </script>
+  <section id="testimonials" class="testimonials container">
+    <h3>What Our Clients Say</h3>
+    <div class="testimonial-card">
+      <p>"DigitalBoost grew our website traffic by 300% in 6 months! The team is incredibly professional."</p>
+      <h5>– Sarah M., CEO of BloomTech</h5>
+    </div>
+  </section>
+
+  <section id="contact" class="contact container">
+    <h3>Let's Grow Your Business</h3>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 DigitalBoost. All rights reserved.</p>
+      <div class="social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
