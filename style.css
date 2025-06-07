@@ -1,110 +1,108 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #f9f9f9;
-  color: #111;
-}
-
-header {
-  background-color: #000;
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
   padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #fff;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+header {
+  background: #0d0d0d;
+  color: #fff;
+}
+.nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
   gap: 2rem;
 }
-
-nav a {
-  color: white;
+.nav a {
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
 }
-
-.slideshow {
-  max-height: 350px;
-  overflow: hidden;
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
 }
-
-.slideshow img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.hero {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
 }
-
-section {
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.btn-primary, .btn-secondary {
+  background: #0077ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+.btn-secondary {
+  background: #00cc66;
+}
+.services .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: #f9f9f9;
   padding: 2rem;
   text-align: center;
-}
-
-.product-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.product {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.product img {
-  width: 100%;
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-
-button {
-  background-color: #000;
-  color: white;
-  padding: 10px;
-  border: none;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 5px;
+.card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0077ff;
 }
-
-form input, form textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
+.about, .testimonials, .contact {
+  margin-top: 4rem;
+}
+.testimonial-card {
+  background: #f0f0f0;
+  padding: 2rem;
+  border-left: 5px solid #0077ff;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact input, .contact textarea {
+  padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 footer {
-  background-color: #111;
+  background: #0d0d0d;
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 2rem 1rem;
 }
-
-#cart {
-  background: #fff;
-  padding: 1rem;
-  margin-top: 2rem;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-#cart-items div {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-#cart button {
-  background: crimson;
-  margin-left: 10px;
+footer .social a {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
 }
